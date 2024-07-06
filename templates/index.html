@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forecast Folio</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicons -->
+<link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='app_logo.jpeg') }}"/>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='bootstrap.css') }}">
+
+<!-- Fonts -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font-awesome.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='simple-line-icons.css') }}" media="screen" />
+<link rel="stylesheet" href="{{ url_for('static', filename='et-line-font.css') }}">
+
+<!-- MENU CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='menuzord.css') }}">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='style.css') }}">
+
+<!-- Responsive -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='responsive.css') }}">
+
+<!-- Animate.min -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='animate.min.css') }}">
+</head>
+
+<body>
+
+<!--preloader start-->
+
+<!--preloader end--> 
+
+<!-- Nav Bar-->
+
+
+<!-- END Nav Bar --> 
+
+<!-- Header -->
+
+<!-- ENd Header --> 
+
+<!-- Login  -->
+<div class="login_page login_solid_bg">
+  <div class="container">
+    <div class="log_in_logo text-center"> <img style="height: 250px" src="{{url_for('static', filename='app_logo.jpeg')}}" </div>
+    <div class="log_in_box">
+      <form class="login" action = "{{ url_for('insertintotable') }}" method = "POST">
+        <div class="login_title">
+          <h2>PLEASE ENTER A STOCK SYMBOL</h2>{% if not_found %}
+          <div class="alert alert-danger" style="color: red;" role="alert">
+  Stock Symbol (Ticker) Not Found. Please Enter a Valid Stock Symbol
+</div>
+          {% endif %}
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name = "nm" placeholder="Company Stock Symbol">
+
+        </div>
+        <div class="form-group">
+          
+        </div>
+        <div class="form-group">
+          <button class="btn btn-login">PREDICT</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+<!-- End Lgin  --> 
+
+<!-- Demo Heading -->
+
+<div class="main-area top-download text-center ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="top-btn-text"> </p>
+      </div>
+      <div class="col-md-4 btn-ma"> </div>
+    </div>
+  </div>
+</div>
+
+<!-- END Demo Heading --> 
+
+<!-- Footer Start  -->
+
+<div class="footer-section-area padding-top-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img  src="{{url_for('static', filename='app_logo.jpeg')}}"</a>
+       
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        
+        <div class="popular-post">
+         <ul>
+          <li>
+<p class="white">The Stock Price Prediction System is an Machine Learning algorithm designed to provide guidance to investors and traders regarding stock selection . This system uses various data sources, including historical data of a stock and its market news to provide stock insights. <p></li>
+          
+        </ul>
+
+
+         
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<!-- End Footer --> 
+
+<!-- Copyright Start  -->
+
+
+
+<!-- End Copyright --> 
+
+<!--Contact Popup-->
+
+<!-- END Donate Popup--> 
+
+
+<!-- js file  --> 
+<script type="text/javascript" src="{{url_for('static', filename='jquery.min.js')}}"></script> 
+
+<!-- Bootstrap JS  --> 
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap.js')}}"></script> 
+
+<!-- Menu JS  --> 
+<script type="text/javascript" src="{{url_for('static', filename='menuzord.js')}}"></script> 
+
+<!-- main js --> 
+<script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
+</body>
+</html>
